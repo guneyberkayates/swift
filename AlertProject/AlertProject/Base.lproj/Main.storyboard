@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlertProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-ym-cPc">
+                                <rect key="frame" x="91" y="376" width="214" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPJ-ZC-naT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15o-pT-5og">
+                                <rect key="frame" x="136" y="61" width="143" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="EAf-mp-2FF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1S8-sn-hN6">
+                                <rect key="frame" x="52" y="229" width="311" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-1d-IQs">
+                                <rect key="frame" x="52" y="288" width="311" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password again..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8J-RG-EDW">
+                                <rect key="frame" x="52" y="351" width="311" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1S8-sn-hN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="1Dt-LB-Ejm"/>
+                            <constraint firstItem="zzq-1d-IQs" firstAttribute="top" secondItem="1S8-sn-hN6" secondAttribute="bottom" constant="25" id="8JW-Ub-6q3"/>
+                            <constraint firstItem="15o-pT-5og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXc-0d-WnY"/>
+                            <constraint firstItem="zzq-1d-IQs" firstAttribute="trailing" secondItem="o8J-RG-EDW" secondAttribute="trailing" id="UXc-PX-h63"/>
+                            <constraint firstItem="1S8-sn-hN6" firstAttribute="centerX" secondItem="15o-pT-5og" secondAttribute="centerX" id="bfM-k4-9kI"/>
+                            <constraint firstItem="15o-pT-5og" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="cSa-Cf-URa"/>
+                            <constraint firstItem="o8J-RG-EDW" firstAttribute="top" secondItem="zzq-1d-IQs" secondAttribute="bottom" constant="29" id="jyv-RY-Eok"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o8J-RG-EDW" secondAttribute="bottom" constant="477" id="ldI-6G-oqM"/>
+                            <constraint firstItem="1S8-sn-hN6" firstAttribute="leading" secondItem="zzq-1d-IQs" secondAttribute="leading" id="rMx-NS-VZz"/>
+                            <constraint firstItem="zzq-1d-IQs" firstAttribute="leading" secondItem="o8J-RG-EDW" secondAttribute="leading" id="uEC-lB-vao"/>
+                            <constraint firstItem="1S8-sn-hN6" firstAttribute="trailing" secondItem="zzq-1d-IQs" secondAttribute="trailing" id="xBc-rs-lHX"/>
+                            <constraint firstItem="15o-pT-5og" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="yJh-O7-5Uf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="password2Text" destination="o8J-RG-EDW" id="8Td-8Z-HKl"/>
+                        <outlet property="passwordText" destination="zzq-1d-IQs" id="xnY-6M-t4B"/>
+                        <outlet property="usernameText" destination="zzq-1d-IQs" id="hjb-DA-k9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

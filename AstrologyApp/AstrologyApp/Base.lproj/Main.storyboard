@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26b-sx-rpl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AstrologyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqh-sW-L1M">
+                                <rect key="frame" x="48" y="241" width="170" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GTu-zG-agD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="doğum bilgileri ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2i-tL-fBh">
+                                <rect key="frame" x="48" y="292" width="170" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="mXT-nx-0jI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doğum Haritası Analizi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4o-nQ-pbB">
+                                <rect key="frame" x="33" y="88" width="201" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="doğum yeri..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZAm-j9-ypb">
+                                <rect key="frame" x="48" y="340" width="170" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="HQY-gR-VsI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q4o-nQ-pbB" firstAttribute="centerX" secondItem="xqh-sW-L1M" secondAttribute="centerX" id="80C-iS-qav"/>
+                            <constraint firstItem="Q4o-nQ-pbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8z8-fC-iWG"/>
+                            <constraint firstItem="xqh-sW-L1M" firstAttribute="leading" secondItem="j2i-tL-fBh" secondAttribute="leading" id="Ajx-7L-RHI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q4o-nQ-pbB" secondAttribute="trailing" constant="180" id="Kv5-Zu-k8N"/>
+                            <constraint firstItem="j2i-tL-fBh" firstAttribute="top" secondItem="xqh-sW-L1M" secondAttribute="bottom" constant="17" id="RpJ-lF-ap7"/>
+                            <constraint firstItem="xqh-sW-L1M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="gp3-lK-LQi"/>
+                            <constraint firstItem="xqh-sW-L1M" firstAttribute="trailing" secondItem="j2i-tL-fBh" secondAttribute="trailing" id="lyb-dC-IIN"/>
+                            <constraint firstItem="xqh-sW-L1M" firstAttribute="top" secondItem="Q4o-nQ-pbB" secondAttribute="bottom" constant="8" id="mW9-w4-buj"/>
+                            <constraint firstItem="Q4o-nQ-pbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="ySn-qd-723"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b2i-6b-uQA"/>
+                    <connections>
+                        <outlet property="birthdayText" destination="j2i-tL-fBh" id="B6m-71-2HZ"/>
+                        <outlet property="nameText" destination="xqh-sW-L1M" id="W8L-og-8u8"/>
+                        <segue destination="Mch-pN-w9E" kind="show" identifier="toDetailsVC" id="yl5-ki-c2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="123.88392857142857"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="rdT-K3-I5o">
+            <objects>
+                <viewController id="Mch-pN-w9E" customClass="detailsVC" customModule="AstrologyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1nw-9t-ClX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ThP-yL-fg9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MQu-Rh-UK2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AA-5s-Vd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zp8-RA-kAX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="26b-sx-rpl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRD-Xm-NUh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Anb-T6-PQU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-RQ-pqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
